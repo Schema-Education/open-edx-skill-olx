@@ -1,0 +1,17 @@
+<problem display_name="Dropdown template" max_attempts="3" showanswer="finished">
+  <optionresponse>
+    <label>QUESTION_TEXT</label>
+    <description>Choose from the dropdown.</description>
+    <optioninput>
+      <option correct="False">WRONG_OPTION_1<optionhint>Why this is wrong.</optionhint></option>
+      <option correct="True">CORRECT_OPTION<optionhint>Why this is right.</optionhint></option>
+      <option correct="False">WRONG_OPTION_2<optionhint>Why this is wrong.</optionhint></option>
+    </optioninput>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>EXPLANATION_OF_CORRECT_ANSWER</p>
+      </div>
+    </solution>
+  </optionresponse>
+</problem>

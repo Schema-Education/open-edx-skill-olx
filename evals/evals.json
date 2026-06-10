@@ -1,0 +1,26 @@
+{
+  "skill_name": "skill-openedx-OLX",
+  "evals": [
+    {
+      "id": 0,
+      "name": "chemistry-multiple-choice",
+      "prompt": "I'm building a Gen Chem course on our Open edX instance. Write me a multiple choice problem asking what the approximate pH of pure water is at 25 °C. Give four options, randomize their order, and have a brief explanation pop up for each wrong answer telling the student why it's wrong. Also include a one-line solution. I'll be pasting this into the advanced editor in Studio.",
+      "expected_output": "A complete <problem> element using <multiplechoiceresponse> with four <choice> elements, exactly one correct (pH 7), shuffle on the <choicegroup>, per-choice <choicehint> on each, a <solution><div class='detailed-solution'> block, a <label>, and a display_name. Ready to paste into Studio's advanced editor.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "physics-numerical-kinetic-energy",
+      "prompt": "I teach intro mechanics on edX. I want a problem where students compute the kinetic energy of a 2 kg object moving at 5 m/s. Give them a 1% tolerance, accept partial credit if they're within 3x of the tolerance band, show units in the input box, and include a worked solution. They'll be entering this in Studio.",
+      "expected_output": "A complete <problem> with <numericalresponse answer='25'> (or equivalent), <responseparam type='tolerance' default='1%' partial_range='3'>, partial_credit='close', <formulaequationinput trailing_text='J'>, <label>, a <solution> with worked steps, and a display_name. Tolerance must be present.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "customresponse-per-student-random-square",
+      "prompt": "Help me write a customresponse problem where every student gets a different random 2-digit integer and has to enter its square. I want it to be the same number for the same student across page reloads. Include sensible feedback on right and wrong answers, and tell me what libraries are safe to use because last time I tried to import matplotlib and the whole thing exploded.",
+      "expected_output": "A complete <problem> with rerandomize='per_student', a <script type='loncapa/python'> that does random.seed(anonymous_student_id), stores the random number and its square in module-level variables, and a cfn that reads those variables (NOT anonymous_student_id directly) to grade. The def line must be at column 0. Should mention the CodeJail allowlist (math, random, numpy, sympy) and explicitly note matplotlib/os/requests are blocked. Includes a <solution>.",
+      "files": []
+    }
+  ]
+}

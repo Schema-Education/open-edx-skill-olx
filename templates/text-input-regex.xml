@@ -1,0 +1,15 @@
+<problem display_name="Text input regex template" max_attempts="3" showanswer="finished">
+  <stringresponse answer="^REGEX_PATTERN$" type="ci regexp">
+    <label>QUESTION_TEXT</label>
+    <description>Multiple correct phrasings are accepted.</description>
+    <additional_answer answer="^ALTERNATE_REGEX$"/>
+    <textline size="40"/>
+    <correcthint>Correct.</correcthint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>EXPLANATION_OF_ACCEPTED_FORMS</p>
+      </div>
+    </solution>
+  </stringresponse>
+</problem>

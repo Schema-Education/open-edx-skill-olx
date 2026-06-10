@@ -1,0 +1,30 @@
+<problem display_name="Multiple choice template" max_attempts="3" showanswer="finished">
+  <multiplechoiceresponse>
+    <label>QUESTION_TEXT</label>
+    <description>Optional sub-prompt or hint about format.</description>
+    <choicegroup type="MultipleChoice" shuffle="true">
+      <choice correct="false">WRONG_CHOICE_1
+        <choicehint>Why this is wrong.</choicehint>
+      </choice>
+      <choice correct="true">CORRECT_CHOICE
+        <choicehint>Why this is right.</choicehint>
+      </choice>
+      <choice correct="false">WRONG_CHOICE_2
+        <choicehint>Why this is wrong.</choicehint>
+      </choice>
+      <choice correct="false" fixed="true">None of the above
+        <choicehint>One of the listed answers is correct.</choicehint>
+      </choice>
+    </choicegroup>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>EXPLANATION_OF_CORRECT_ANSWER</p>
+      </div>
+    </solution>
+  </multiplechoiceresponse>
+  <demandhint>
+    <hint>FIRST_HINT</hint>
+    <hint>SECOND_HINT</hint>
+  </demandhint>
+</problem>

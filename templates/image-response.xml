@@ -1,0 +1,16 @@
+<problem display_name="Image-mapped input template" max_attempts="3" showanswer="finished">
+  <imageresponse>
+    <label>QUESTION_TEXT — click the correct region of the image below.</label>
+    <description>If you use a screen reader, contact your instructor for an alternative version of this problem.</description>
+    <imageinput src="/static/IMAGE_FILENAME.png"
+                width="600" height="400"
+                rectangle="(X1,Y1)-(X2,Y2)"
+                alt="DESCRIPTIVE_ALT_TEXT"/>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>WHY_THIS_REGION_IS_CORRECT</p>
+      </div>
+    </solution>
+  </imageresponse>
+</problem>

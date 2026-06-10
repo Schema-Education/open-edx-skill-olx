@@ -1,0 +1,51 @@
+<problem display_name="Custom Python multi-input template"
+         max_attempts="3"
+         showanswer="finished">
+  <script type="loncapa/python">
+def check_pair(expect, ans):
+    x_str, y_str = ans
+    try:
+        x = float(x_str)
+        y = float(y_str)
+    except (ValueError, TypeError):
+        return {
+            'overall_message': '&lt;p&gt;Both inputs must be numbers.&lt;/p&gt;',
+            'input_list': [
+                {'ok': False, 'msg': '', 'grade_decimal': 0.0},
+                {'ok': False, 'msg': '', 'grade_decimal': 0.0},
+            ],
+        }
+
+    x_ok = abs(x - EXPECTED_X) &lt; 1e-6
+    y_ok = abs(y - EXPECTED_Y) &lt; 1e-6
+    y_close = abs(y - EXPECTED_Y) &lt; 0.1
+
+    return {
+        'overall_message': '&lt;p&gt;Each input is graded independently.&lt;/p&gt;',
+        'input_list': [
+            {'ok': x_ok,
+             'msg': '&lt;p&gt;x is correct.&lt;/p&gt;' if x_ok else f'&lt;p&gt;x should be {EXPECTED_X}.&lt;/p&gt;',
+             'grade_decimal': 1.0 if x_ok else 0.0},
+            {'ok': y_ok if y_ok else ('Partial' if y_close else False),
+             'msg': '&lt;p&gt;y is correct.&lt;/p&gt;' if y_ok else
+                    ('&lt;p&gt;y is close — half credit.&lt;/p&gt;' if y_close else
+                     f'&lt;p&gt;y should be {EXPECTED_Y}.&lt;/p&gt;'),
+             'grade_decimal': 1.0 if y_ok else (0.5 if y_close else 0.0)},
+        ],
+    }
+  </script>
+
+  <p>QUESTION_TEXT — provide values for both x and y.</p>
+
+  <customresponse cfn="check_pair">
+    <p>x: <textline label="x" size="6"/></p>
+    <p>y: <textline label="y" size="6"/></p>
+  </customresponse>
+
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>WORKED_SOLUTION_TEMPLATE</p>
+    </div>
+  </solution>
+</problem>

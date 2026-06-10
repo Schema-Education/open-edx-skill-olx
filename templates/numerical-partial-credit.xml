@@ -1,0 +1,15 @@
+<problem display_name="Numerical with partial credit" max_attempts="3" showanswer="finished">
+  <numericalresponse answer="EXPECTED_NUMBER" partial_credit="close">
+    <label>QUESTION_TEXT</label>
+    <description>50% credit if your answer is within 3× the stated tolerance.</description>
+    <responseparam type="tolerance" default="2%" partial_range="3"/>
+    <formulaequationinput size="20" trailing_text="UNITS_OR_EMPTY"/>
+    <correcthint>Correct.</correcthint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>WORKED_SOLUTION</p>
+      </div>
+    </solution>
+  </numericalresponse>
+</problem>

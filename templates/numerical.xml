@@ -1,0 +1,18 @@
+<problem display_name="Numerical input template" max_attempts="3" showanswer="finished">
+  <numericalresponse answer="EXPECTED_NUMBER">
+    <label>QUESTION_TEXT</label>
+    <description>Enter a number. Tolerance is 1% — exact matching is not required.</description>
+    <responseparam type="tolerance" default="1%"/>
+    <formulaequationinput size="20" trailing_text="UNITS_OR_EMPTY"/>
+    <additional_answer answer="ALTERNATE_VALUE">
+      <correcthint>Why this alternate is also accepted.</correcthint>
+    </additional_answer>
+    <correcthint>Correct.</correcthint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>WORKED_SOLUTION</p>
+      </div>
+    </solution>
+  </numericalresponse>
+</problem>

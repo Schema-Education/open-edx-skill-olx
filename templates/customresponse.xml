@@ -1,0 +1,35 @@
+<problem display_name="Custom Python-graded template"
+         max_attempts="3"
+         rerandomize="per_student"
+         showanswer="finished">
+  <script type="loncapa/python">
+import random
+
+random.seed(anonymous_student_id)
+
+problem_value = random.randint(LOW, HIGH)
+expected_answer = COMPUTE_EXPECTED_ANSWER_FROM(problem_value)
+
+def check_answer(expect, ans):
+    try:
+        learner_value = float(ans)
+    except (ValueError, TypeError):
+        return {'ok': False, 'msg': '<p>Please enter a number.</p>'}
+    if abs(learner_value - expected_answer) &lt; 1e-6 * max(1.0, abs(expected_answer)):
+        return {'ok': True, 'msg': f'&lt;p&gt;Correct — the answer is {expected_answer}.&lt;/p&gt;'}
+    return {'ok': False, 'msg': f'&lt;p&gt;Not quite — expected {expected_answer}.&lt;/p&gt;'}
+  </script>
+
+  <p>QUESTION_TEXT involving the value $problem_value.</p>
+
+  <customresponse cfn="check_answer">
+    <textline size="20"/>
+  </customresponse>
+
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>WORKED_SOLUTION_TEMPLATE</p>
+    </div>
+  </solution>
+</problem>

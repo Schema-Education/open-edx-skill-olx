@@ -1,0 +1,24 @@
+<problem display_name="Checkbox template" max_attempts="3" weight="2.0" showanswer="finished">
+  <choiceresponse partial_credit="EDC">
+    <label>QUESTION_TEXT</label>
+    <description>Select all that apply.</description>
+    <checkboxgroup>
+      <choice correct="true">CORRECT_CHOICE_1
+        <choicehint selected="true">Yes — explain why this is correct.</choicehint>
+        <choicehint selected="false">Hint about why this should have been selected.</choicehint>
+      </choice>
+      <choice correct="true">CORRECT_CHOICE_2</choice>
+      <choice correct="false">WRONG_CHOICE_1
+        <choicehint selected="true">Explain why this is wrong.</choicehint>
+      </choice>
+      <choice correct="false">WRONG_CHOICE_2</choice>
+    </checkboxgroup>
+    <compoundhint value="A B">You got both correct ones — well done.</compoundhint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>EXPLANATION_OF_CORRECT_ANSWERS</p>
+      </div>
+    </solution>
+  </choiceresponse>
+</problem>

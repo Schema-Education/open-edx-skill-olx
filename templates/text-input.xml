@@ -1,0 +1,18 @@
+<problem display_name="Text input template" max_attempts="3" showanswer="finished">
+  <stringresponse answer="EXPECTED_ANSWER" type="ci">
+    <label>QUESTION_TEXT</label>
+    <description>Spelling matters; capitalization does not.</description>
+    <additional_answer answer="ALTERNATE_SPELLING">
+      <correcthint>Also accepted.</correcthint>
+    </additional_answer>
+    <stringequalhint answer="COMMON_WRONG_ANSWER">Targeted hint for this common wrong answer.</stringequalhint>
+    <textline size="30"/>
+    <correcthint>Correct.</correcthint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>EXPLANATION</p>
+      </div>
+    </solution>
+  </stringresponse>
+</problem>

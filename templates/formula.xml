@@ -1,0 +1,17 @@
+<problem display_name="Formula response template" max_attempts="3" showanswer="finished">
+  <formularesponse type="ci"
+                   samples="VAR_1,VAR_2@LOW_1,LOW_2:HIGH_1,HIGH_2#10"
+                   answer="EXPECTED_EXPRESSION">
+    <label>QUESTION_TEXT</label>
+    <description>Express your answer in terms of VAR_1 and VAR_2.</description>
+    <responseparam type="tolerance" default="0.0001"/>
+    <formulaequationinput size="40"/>
+    <correcthint>Correct.</correcthint>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>DERIVATION</p>
+      </div>
+    </solution>
+  </formularesponse>
+</problem>
